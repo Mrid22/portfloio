@@ -9,7 +9,7 @@ export default function Clock() {
       const now = new Date();
       const hours = now.getHours();
       const minutes = now.getMinutes();
-      const formattedTime = `${hours.toString().padStart(2, "0")}:${minutes.toString()}`;
+      const formattedTime = `${hours.toString().padStart(2, "0")}:${minutes.toString().padStart(2, "0")}`;
       setCurrentTime(formattedTime);
     }
 
