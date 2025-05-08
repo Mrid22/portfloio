@@ -9,7 +9,7 @@ export default function Home() {
         }
       >
         <p>1</p>
-        <p>Mridul Agarwal</p>
+        <p>Mridul Agarwale</p>
         <Clock />
       </header>
       <main className={"bg-black"}>
