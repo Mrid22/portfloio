@@ -12,12 +12,9 @@ export default function Home() {
       >
         <p>1</p>
         <p>{title}</p>
-        <Clock />
+        <Clock/>
       </header>
       <main className={"bg-black"}>
-        <div className={"text-10xl bg-black w-screen"}>
-          Next.js on GitHub Pages
-        </div>
         <div id={"Hero"} className={"w-screen h-screen"}>
           <Image src={"wallpaper.jpg"} alt={"wallpaper"} fill={true} />
         </div>
