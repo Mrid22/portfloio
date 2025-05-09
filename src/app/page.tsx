@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Clock from "../components/Clock";
 import Intro from "../components/Intro";
-import Menu from "../components/Gauntlet";
+import Menu from "../components/Menu";
 
 export default function Home() {
   const title = "Mridul Agarwal";

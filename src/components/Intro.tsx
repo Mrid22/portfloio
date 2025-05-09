@@ -29,13 +29,14 @@ export default function Intro() {
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent>
           <DialogHeader>
-            <DialogTitle>Welcome to my computer!</DialogTitle>
+            <DialogTitle>Hi I'm Mridul Agarwal</DialogTitle>
             <DialogDescription>
-              Or at least a portfolio inspired by it, my computer's the thing i
-              customize the most, so i figured it's the best way to get to know
-              me and my design language. Press <strong>Alt + R</strong> to open
-              the menu, and <strong>Alt + Enter</strong> to go full screen. have
-              fun poking around!
+              Welcome to my computer! Or at least a portfolio inspired by it, my
+              computer's the thing i customize the most, so i figured it's the
+              best way to get to know me and my design language. Press{" "}
+              <strong>Alt + R</strong> to open the menu, and{" "}
+              <strong>Alt + Enter</strong> to go full screen. Have fun poking
+              around!
             </DialogDescription>
           </DialogHeader>
         </DialogContent>

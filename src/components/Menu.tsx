@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-
+import { useRouter } from "next/navigation";
 import {
   CommandDialog,
   CommandEmpty,
@@ -12,9 +12,10 @@ import {
   CommandSeparator,
   CommandShortcut,
 } from "../components/ui/command";
-
 export default function Menu() {
   const [open, setOpen] = React.useState(false);
+  const router = useRouter();
+  function navigatetoPython() {}
 
   React.useEffect(() => {
     const down = (e: KeyboardEvent) => {
@@ -35,15 +36,17 @@ export default function Menu() {
         <CommandList>
           <CommandEmpty>No results found.</CommandEmpty>
           <CommandGroup heading="Projects">
-            <CommandItem>
+            <CommandItem onSelect={() => router.push("/projects/ui-design")}>
               <span>UI Design</span>
               <CommandShortcut>My UI Design Projects</CommandShortcut>
             </CommandItem>
-            <CommandItem>
+            <CommandItem onSelect={() => router.push("/projects/python")}>
               <span>Python</span>
               <CommandShortcut>My Python Projects</CommandShortcut>
             </CommandItem>
-            <CommandItem>
+            <CommandItem
+              onSelect={() => router.push("/projects/web-development")}
+            >
               <span>Web Development</span>
               <CommandShortcut>My Web Dev Projects</CommandShortcut>
             </CommandItem>
