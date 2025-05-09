@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Clock from "../components/Clock";
 import Intro from "../components/Intro";
-import Gauntlet from "../components/Gauntlet";
+import Menu from "../components/Gauntlet";
 
 export default function Home() {
   const title = "Mridul Agarwal";
@@ -22,7 +22,7 @@ export default function Home() {
           <Image src={"wallpaper.jpg"} alt={"wallpaper"} fill={true} />
         </div>
         <Intro />
-        <Gauntlet />
+        <Menu />
       </main>
     </>
   );

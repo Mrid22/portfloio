@@ -13,7 +13,7 @@ import {
   CommandShortcut,
 } from "../components/ui/command";
 
-export default function Gauntlet() {
+export default function Menu() {
   const [open, setOpen] = React.useState(false);
 
   React.useEffect(() => {
@@ -46,6 +46,13 @@ export default function Gauntlet() {
             <CommandItem>
               <span>Web Development</span>
               <CommandShortcut>My Web Dev Projects</CommandShortcut>
+            </CommandItem>
+          </CommandGroup>
+          <CommandSeparator />
+          <CommandGroup heading="About me">
+            <CommandItem>
+              <span>Resume (WIP)</span>
+              <CommandShortcut>My Resume</CommandShortcut>
             </CommandItem>
           </CommandGroup>
         </CommandList>
