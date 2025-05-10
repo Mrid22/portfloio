@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "../components/theme-provider";
-export const metadata: Metadata = {
-  title: "Next.js on GitHub Pages",
-  description: "Deploy your static Next.js site to GitHub Pages.",
+import Header from "../components/Header";
+import Image from "next/image";
+import Menu from "../components/Menu";
+export const metadata: Metadata & { title: string } = {
+  title: "Mridul Agarwal",
 };
 
 export default function RootLayout({
@@ -20,7 +22,14 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <Header title={metadata.title} />
+          <main>
+            <div id={"Hero"} className={"w-screen h-screen relative"}>
+              <Image src={"/wallpaper.jpg"} alt={"wallpaper"} fill={true} />
+            </div>
+            {children}
+            <Menu />
+          </main>
         </ThemeProvider>
       </body>
     </html>

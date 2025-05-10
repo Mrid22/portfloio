@@ -12,10 +12,10 @@ import {
   CommandSeparator,
   CommandShortcut,
 } from "../components/ui/command";
+
 export default function Menu() {
   const [open, setOpen] = React.useState(false);
   const router = useRouter();
-  function navigatetoPython() {}
 
   React.useEffect(() => {
     const down = (e: KeyboardEvent) => {
@@ -36,15 +36,22 @@ export default function Menu() {
         <CommandList>
           <CommandEmpty>No results found.</CommandEmpty>
           <CommandGroup heading="Projects">
-            <CommandItem onSelect={() => router.push("/projects/ui-design")}>
+            <CommandItem
+              onBeforeInput={() => router.prefetch("/projects/ui-design")}
+              onSelect={() => router.push("/projects/ui-design")}
+            >
               <span>UI Design</span>
               <CommandShortcut>My UI Design Projects</CommandShortcut>
             </CommandItem>
-            <CommandItem onSelect={() => router.push("/projects/python")}>
+            <CommandItem
+              onBeforeInput={() => router.push("/projects/python")}
+              onSelect={() => router.push("/projects/python")}
+            >
               <span>Python</span>
               <CommandShortcut>My Python Projects</CommandShortcut>
             </CommandItem>
             <CommandItem
+              onBeforeInput={() => router.prefetch("/projects/web-development")}
               onSelect={() => router.push("/projects/web-development")}
             >
               <span>Web Development</span>
