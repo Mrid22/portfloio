@@ -14,7 +14,7 @@ export default function Header({ title }: { title: string }) {
     }
 
     setTime();
-    const intervalId = setInterval(setTime, 60000);
+    const intervalId = setInterval(setTime, 1000);
 
     return () => clearInterval(intervalId);
   }, []);

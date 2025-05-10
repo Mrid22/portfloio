@@ -27,7 +27,7 @@ export default function RootLayout({
             <div id={"Hero"} className={"w-screen h-screen relative"}>
               <Image src={"/wallpaper.jpg"} alt={"wallpaper"} fill={true} />
             </div>
-            {children}
+            <div className="absolute">{children}</div>
             <Menu />
           </main>
         </ThemeProvider>

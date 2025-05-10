@@ -19,7 +19,7 @@ export default function Menu() {
 
   React.useEffect(() => {
     const down = (e: KeyboardEvent) => {
-      if (e.key === "r" && e.altKey) {
+      if (e.key === " " && e.altKey) {
         e.preventDefault();
         setOpen((open) => !open);
       }
@@ -38,21 +38,30 @@ export default function Menu() {
           <CommandGroup heading="Projects">
             <CommandItem
               onBeforeInput={() => router.prefetch("/projects/ui-design")}
-              onSelect={() => router.push("/projects/ui-design")}
+              onSelect={() => {
+                router.push("/projects/ui-design");
+                setOpen(false);
+              }}
             >
               <span>UI Design</span>
               <CommandShortcut>My UI Design Projects</CommandShortcut>
             </CommandItem>
             <CommandItem
               onBeforeInput={() => router.push("/projects/python")}
-              onSelect={() => router.push("/projects/python")}
+              onSelect={() => {
+                router.push("/projects/python");
+                setOpen(false);
+              }}
             >
               <span>Python</span>
               <CommandShortcut>My Python Projects</CommandShortcut>
             </CommandItem>
             <CommandItem
               onBeforeInput={() => router.prefetch("/projects/web-development")}
-              onSelect={() => router.push("/projects/web-development")}
+              onSelect={() => {
+                router.push("/projects/web-development");
+                setOpen(false);
+              }}
             >
               <span>Web Development</span>
               <CommandShortcut>My Web Dev Projects</CommandShortcut>
