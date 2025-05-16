@@ -19,7 +19,7 @@ export default function Menu() {
 
   React.useEffect(() => {
     const down = (e: KeyboardEvent) => {
-      if (e.key === " " && e.altKey) {
+      if (e.key === "r" && e.altKey) {
         e.preventDefault();
         setOpen((open) => !open);
       }
