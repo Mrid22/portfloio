@@ -25,7 +25,11 @@ export default function RootLayout({
           <Header title={metadata.title} />
           <main>
             <div id={"Hero"} className={"w-screen h-screen absolute z-0"}>
-              <Image src={"/wallpaper.jpg"} alt={"wallpaper"} fill={true} />
+              <Image
+                src={"/portfolio/wallpaper.jpg"}
+                alt={"wallpaper"}
+                fill={true}
+              />
             </div>
             <div className="absolute">{children}</div>
             <Menu />
