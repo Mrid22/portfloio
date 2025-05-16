@@ -1,3 +1,9 @@
+import { Metadata } from "next";
+export const generateMetadata = (): Metadata => {
+  return {
+    title: "Mridul Agarwal - UI Design",
+  };
+};
 export default function UiDesign() {
   return (
     <>
